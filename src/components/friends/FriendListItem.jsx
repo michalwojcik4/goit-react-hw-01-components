@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import css from './FriendList.module.css';
 
 export const FriendListItem = ({ friend }) => (
-  <li class="item">
-    <span class="status">x</span>
-    <img class="avatar" src={friend.avatar} alt="User avatar" width="48" />
-    <p class="name">{friend.name}</p>
+  <li className={css.item}>
+    <span className={css.status}></span>
+    <img className={css.avatar} src={friend.avatar} alt="User avatar" width="48" />
+    <p className={css.name}>{friend.name}</p>
   </li>
 );
 
