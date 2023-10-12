@@ -1,18 +1,17 @@
 import PropTypes from 'prop-types';
 import css from './FriendList.module.css';
+import clsx from 'clsx';
 
-export const FriendListItem = ({ friend }) => (
+export const FriendListItem = ({ avatar, name, isOnline }) => (
   <li className={css.item}>
-    <span className={css.status}></span>
-    <img className={css.avatar} src={friend.avatar} alt="User avatar" width="48" />
-    <p className={css.name}>{friend.name}</p>
+    <span className={clsx(css.status, { [css.isOnline]: isOnline })}></span>
+    <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
+    <p className={css.name}>{name}</p>
   </li>
 );
 
 FriendListItem.propTypes = {
-  friend: PropTypes.shape({
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-  }),
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  isOnline: PropTypes.bool
 };
