@@ -2,6 +2,7 @@ import { Profile } from './profile/Profile';
 import { Statistics } from './stats/Statistics';
 import { FriendList } from './friends/FriendList';
 import { TransactionHistory } from './transaction-history/TransactionHistory';
+
 import user from 'path/to/user.json';
 import data from 'path/to/data.json';
 import friendsData from 'path/to/friends.json';
